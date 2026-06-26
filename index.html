@@ -1,282 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        /* Global Variables & Reset */
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        /* Navigation Bar */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid #334155;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-main);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Main Layout Wrapper */
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 120px 20px 60px 20px;
-        }
-
-        section {
-            margin-bottom: 80px;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 0;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 16px;
-            letter-spacing: -1px;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: #000000;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.2s;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* Grid Section (Projects/Features) */
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 24px;
-            border-left: 4px solid var(--accent);
-            padding-left: 12px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1100px));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 24px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        .card p {
-            color: var(--text-muted);
-        }
-
-        /* Contact Form Section */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            max-width: 500px;
-            margin: 0 auto;
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        input, textarea {
-            padding: 12px;
-            background-color: var(--bg-color);
-            border: 1px solid #334155;
-            border-radius: 6px;
-            color: var(--text-main);
-            font-size: 1rem;
-        }
-
-        input:focus, textarea:focus {
-            outline: 2px solid var(--accent);
-        }
-
-        form button {
-            background-color: var(--accent);
-            color: #000000;
-            border: none;
-            padding: 14px;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        form button:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #334155;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Web Gateway</title>
+<style>
+/* Global Variables & Reset */
+:root {
+--bg-color: #0f172a;
+--card-bg: #1e293b;
+--text-main: #f8fafc;
+--text-muted: #94a3b8;
+--accent: #38bdf8;
+--accent-hover: #0ea5e9;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+sans-serif;
+background-color: var(--bg-color);
+color: var(--text-main);
+line-height: 1.6;
+}
+/* Navigation Bar */
+header {
+position: fixed;
+top: 0;
+width: 100%;
+background-color: rgba(15, 23, 42, 0.9);
+backdrop-filter: blur(8px);
+border-bottom: 1px solid #334155;
+z-index: 100;
+}
+.nav-container {
+max-width: 1100px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;padding: 20px;
+}
+.logo {
+font-size: 1.3rem;
+font-weight: 700;
+color: var(--text-main);
+text-decoration: none;
+}
+.nav-links {
+display: flex;
+gap: 24px;
+list-style: none;
+}
+.nav-links a {
+color: var(--text-muted);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.2s;
+}
+.nav-links a:hover {
+color: var(--accent);
+}
+/* Main Layout Wrapper */
+main {
+max-width: 1100px;
+margin: 0 auto;
+padding: 120px 20px 60px 20px;
+}
+section {
+margin-bottom: 80px;
+}
+/* Hero Section */
+.hero {
+text-align: center;
+padding: 60px 0;
+}
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 16px;
+letter-spacing: -1px;}
+.hero h1 span {
+color: var(--accent);
+}
+.hero p {
+font-size: 1.2rem;
+color: var(--text-muted);
+max-width: 600px;
+margin: 0 auto 35px auto;
+}
+/* Reflect4 Widget Layout Wrapper */
+.widget-wrapper {
+max-width: 500px;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#r4-widget-form {
+width: 100%;
+}
+/* Grid Section (Projects/Features) */
+h2 {
+font-size: 2rem;
+margin-bottom: 24px;
+border-left: 4px solid var(--accent);
+padding-left: 12px;
+}
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+}
+.card {
+background-color: var(--card-bg);
+padding: 24px;
+border-radius: 8px;
+border: 1px solid #334155;
+}
+.card h3 {margin-bottom: 10px;
+font-size: 1.3rem;
+}
+.card p {
+color: var(--text-muted);
+}
+/* Contact Form Section */
+form {
+display: flex;
+flex-direction: column;
+gap: 16px;
+max-width: 500px;
+margin: 0 auto;
+background-color: var(--card-bg);
+padding: 30px;
+border-radius: 8px;
+border: 1px solid #334155;
+}
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+label {
+font-size: 0.9rem;
+color: var(--text-muted);
+}
+input, textarea {
+padding: 12px;
+background-color: var(--bg-color);
+border: 1px solid #334155;
+border-radius: 6px;
+color: var(--text-main);
+font-size: 1rem;
+}
+input:focus, textarea:focus {
+outline: 2px solid var(--accent);
+}
+form button {
+background-color: var(--accent);
+color: #000000;border: none;
+padding: 14px;
+border-radius: 6px;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+form button:hover {
+background-color: var(--accent-hover);
+}
+/* Footer */
+footer {
+text-align: center;
+padding: 40px 20px;
+border-top: 1px solid #334155;
+color: var(--text-muted);
+font-size: 0.9rem;
+}
+</style>
 </head>
 <body>
-
-    <!-- Navigation Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">MyBrand.</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main>
-        <!-- Hero Introduction -->
-        <section class="hero" id="about">
-            <h1>Hi, I'm <span>Your Name</span></h1>
-            <p>Welcome to my corner of the web. I build clean web applications, design minimal user layouts, and turn creative ideas into real functional code.</p>
-            <a href="#contact" class="btn">Get In Touch</a>
-        </section>
-
-        <!-- Work/Features Grid -->
-        <section id="work">
-            <h2>Featured Work</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Project Name One</h3>
-                    <p>A brief summary details about what this project is, the technology stacks you used to build it, and the problem it successfully solves.</p>
-                </div>
-                <div class="card">
-                    <h3>Project Name Two</h3>
-                    <p>A brief summary details about what this project is, the technology stacks you used to build it, and the problem it successfully solves.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Form -->
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST" onsubmit="alert('Message Sent!'); return false;">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="John Doe" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="john@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Write your message details here..." required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer Copyright -->
-    <footer>
-        <p>&copy; 2026 MyBrand. All rights reserved.</p>
-    </footer>
-
+<!-- Navigation Header -->
+<header>
+<div class="nav-container">
+<a href="#" class="logo">GatewayHub.</a>
+<ul class="nav-links">
+<li><a href="#about">Proxy</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</header>
+<!-- Main Content Area -->
+<main>
+<!-- Hero Introduction with Integrated Proxy Widget -->
+<section class="hero" id="about">
+<h1>Secure <span>Web Proxy</span> Gateway</h1>
+<p>Access your favorite websites safely and anonymously. Enter any web URL
+below to begin browsing through the encrypted network panel layer.</p>
+<!-- Reflect4 Proxy Widget Container -->
+<div class="widget-wrapper">
+<div id="r4-widget-form"></div><script async src="https:/www.my-private-node-999.com/widget/widget.js"
+data-id="r4-widget-connection"></script>
+</div>
+</section>
+<!-- Work/Features Grid -->
+<section id="features">
+<h2>Network Features</h2>
+<div class="grid">
+<div class="card">
+<h3>Encrypted Routing</h3>
+<p>Every web connection request passes through an encrypted secure
+tunneling server layer to keep your local credentials hidden.</p>
+</div>
+<div class="card">
+<h3>High Speed Delivery</h3>
+<p>Optimized data processing layers ensure quick response streaming
+pipelines when pulling heavy assets or multimedia files.</p>
+</div>
+</div>
+</section>
+<!-- Interactive Contact Form -->
+<section id="contact">
+<h2>Support & Feedback</h2>
+<form action="#" method="POST" onsubmit="alert('Message Sent!'); return false;">
+<div class="form-group">
+<label for="name">Your Name</label>
+<input type="text" id="name" placeholder="John Doe" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" placeholder="john@example.com" required>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" rows="5" placeholder="Let us know if you find any
+bugs..." required></textarea>
+</div>
+<button type="submit">Send Message</button>
+</form>
+</section>
+</main>
+<!-- Footer Copyright -->
+<footer>
+<p>&copy; 2026 GatewayHub. Powered by Reflect4 Engine Engine • Hosted on
+Cloudflare Pages.</p></footer>
 </body>
 </html>
